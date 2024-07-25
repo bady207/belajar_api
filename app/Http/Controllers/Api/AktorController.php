@@ -23,6 +23,7 @@ class AktorController extends Controller
     {
         $aktor = new aktor();
         $aktor->nama_aktor = $request->nama_aktor;
+        $aktor->biodata = $request->biodata;
         $aktor->save();
         return response()->json([
             'success' => true,
@@ -52,6 +53,7 @@ class AktorController extends Controller
         $aktor = aktor::find($id);
         if ($aktor) {
             $aktor->nama_aktor = $request->nama_aktor;
+            $aktor->biodata = $request->biodata;
             $aktor->save();
             return response()->json([
                 'success' => true,

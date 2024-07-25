@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\AktorController;
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\FilmController;
 use App\Http\Controllers\Api\GenreController;
 use App\Http\Controllers\Api\KategoriController;
 use Illuminate\Http\Request;
@@ -23,6 +24,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::resource('kategori', KategoriController::class);
     Route::resource('genre', GenreController::class);
     Route::resource('aktor', AktorController::class);
+    Route::resource('film', FilmController::class);
 });
 
 // auth route
